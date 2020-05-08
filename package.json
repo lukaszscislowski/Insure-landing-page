@@ -1,0 +1,33 @@
+{
+  "name": "insure-landing-page-master",
+  "version": "1.0.0",
+  "description": "Site",
+  "main": "sass/mystyles.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css-build": "node-sass --omit-source-map-url sass/mystyles.scss css/mystyles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch",
+    "js-build": "babel _javascript --out-dir lib",
+    "js-watch": "npm run js-build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukaszscislowski/Insure-landing-page.git"
+  },
+  "author": "Lukas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukaszscislowski/Insure-landing-page/issues"
+  },
+  "homepage": "https://github.com/lukaszscislowski/Insure-landing-page#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "@vizuaalog/bulmajs": "^0.10.3",
+    "bulma": "^0.8.2",
+    "node-sass": "^4.14.1"
+  }
+}
