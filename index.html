@@ -11,28 +11,35 @@
   <body>
 
     <section class="section is-paddingless-horizontal is-section-nav">
-      <div class="container">
+      <div class="container-fluid">
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
             <a class="navbar-item" href="#">
               <img src="./images/logo.svg" width="112" height="28">
             </a>
+            <a role="button" class="navbar-burger is-active" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
           </div>
+        <div id="navbarBasicExample" class="navbar-menu is-active">
           <div class="navbar-end">
             <div class="navbar-item">How we work</div>
             <div class="navbar-item"> Blog</div>
             <div class="navbar-item">Account</div>
             <div class="navbar-item">
-              <button class="button"> View plans</button>
+              <button class="button is-active  "> View plans</button>
             </div>
           </div>
+        </div>
         </nav>
       </div>
     </section>
-    <section class="hero hero-main darkviolet">
+    <section class="section is-paddingless-horizontal hero-main darkviolet">
       <div class="hero-body">
-        <div class="container ">
-          <div class="columns">
+        <div class="container container--img">
+          <div class="columns columns-order">
             <div class="column is-two-fifths is-paddinglg">
               <h1 class="title title-main">
                 Humanizing your insurance.
@@ -42,18 +49,21 @@
                 and technology to help you find the plan that’s right for you. Ensure you 
                 and your loved ones are protected.
               </h2>
-              <button class="button"> View plans</button> 
+              <button class="button button-subtitle is-active is-white"> View plans</button> 
+            </div>
+            <div class="column">
+              <!-- <p class="media-main"></p> -->
             </div>
           </div>
-          
         </div>
       </div>
+      <!-- <img class="image-content-left " src="" alt=""> -->
     </section>
     
-    <section class="hero">
-      <div class="hero-body ">
+    <section class="hero hero-secondary">
+      <div class="hero-body hero-body-mobile">
         <div class="container container-mobile">
-          <div class="title is-size-3 ">
+          <div class="title title-secondary">
             We’re different
           </div>
           <div class="columns is-variable  is-1-mobile is-0-tablet is-3-desktop ">
@@ -97,12 +107,12 @@
         </div>
       </div>
     </section>
-    <section class="hero ">
+    <section class=" hero-third">
       <div class="container container-sec darkviolet is-flex ">
-        <div class="column notification-sec is-size-1 is-one-third">
+        <div class="column notification-sec  is-three-fifths">
         Find out more about how we work
         </div>
-        <button class="button button-sec">How we work</button>
+        <button class="button button-sec is-active is-white">How we work</button>
       </div>
     </section>
     
@@ -130,8 +140,8 @@
             <img src="./images/icon-instagram.svg">
           </figure>
         </div>
-        
       </div>
+      <div class="container container-break has-background-black"></div>
       <div class="container ">
       <div class="columns is-variable is-8-desktop is-mobile is-multiline is-centered">
         <div class="column">
@@ -180,6 +190,6 @@
     </div>
   
     </footer>
-
+    <script src="script/scripts.js"></script>
   </body>
 </html>
