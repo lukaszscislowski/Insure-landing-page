@@ -5347,7 +5347,7 @@ a {
   padding: 1rem; }
 
 .column-media {
-  background: red;
+  background: url(../images/image-intro-desktop.jpg) center/cover;
   width: 100%;
   height: 500px;
   margin: auto 50%; }
@@ -5418,7 +5418,13 @@ a {
   width: 438px;
   height: 650px; }
 
+.pattern-mobile {
+  width: 100%;
+  right: 0;
+  display: none; }
+
 .hero-media {
+  min-width: 40rem;
   min-height: 40rem;
   transform: translateY(-60%);
   margin: 0 auto; }
@@ -5496,7 +5502,18 @@ a {
   .button-sec {
     margin: 2rem auto;
     display: flex; }
-  .columns {
+  .navbar-end .navbar-item {
+    text-align: center;
+    padding: 1.25rem 0.75rem; }
+  .navbar-item {
+    color: white;
+    font-size: 1.75rem; }
+  .navbar-menu-active {
+    background-color: #2d2640;
+    min-height: 100vh;
+    color: white; }
+  .mobile-container {
+    display: flex;
     flex-direction: column-reverse;
     align-items: center;
     text-align: center; }
@@ -5505,18 +5522,23 @@ a {
   .title-main {
     font-size: 2rem; }
   .column-media {
-    background: green;
     margin: 0 auto; }
   .media {
     flex-direction: column; }
+  .media-left, .content, .heading {
+    text-align: center; }
   .hero-body-mobile {
     padding: 9rem 1.5rem 1.5rem; }
   .hero-main {
     padding-bottom: 2rem; }
   .hero-media {
-    transform: translateY(0%); }
+    transform: translateY(0%);
+    min-height: 36rem; }
+  .hero-active {
+    display: none; }
   .col-pattern::before {
-    top: 13%;
+    top: 0;
+    transform: translateY(316%);
     background: url(..//images/bg-pattern-intro-left-mobile.svg) no-repeat;
     height: 200px; }
   .col-pattern::after {
@@ -5524,7 +5546,10 @@ a {
     width: 124px;
     height: 350px;
     right: 0;
-    top: 40vh; }
+    top: 0;
+    transform: translateY(276%); }
+  .pattern-mobile {
+    display: block; }
   .footer::before {
     background: url(..//images/bg-pattern-footer-mobile.svg) no-repeat;
     z-index: 100; }
@@ -5534,7 +5559,7 @@ a {
     flex-direction: column; }
   .container-sec::after {
     background: url(..//images/bg-pattern-how-we-work-mobile.svg) no-repeat;
-    width: 57%;
+    width: 33%;
     height: 100%; }
   .notification-sec {
     margin: 1rem auto;
