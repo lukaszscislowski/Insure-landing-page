@@ -35,4 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
   
   });
 
+  const navbarItems = document.querySelectorAll('.items');
+  navbarItems.mouseenter = null;
+
+  function highlightLink() {
+    this.classList.add('item-highlight'); 
+  }
+
+  function removeHighlight() {
+    this.classList.remove('item-highlight');
+  }
+
+
+
+
+ navbarItems.forEach(items => items.addEventListener('mouseenter', highlightLink));
+ navbarItems.forEach(items => items.addEventListener('mouseleave', removeHighlight));
  

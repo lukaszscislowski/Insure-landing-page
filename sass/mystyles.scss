@@ -20,7 +20,7 @@
 // Colors
 $darkViolet: hsl(256, 26%, 20%);
 $graishBlue: hsl(216, 30%, 68%);
-$veryDarkVilet: hsl(270, 9%, 17%);
+$veryDarkViolet: hsl(270, 39%, 17%);
 $darkgraishViolet: hsl(273, 4%, 51%);
 $veryLightGray: hsl(0, 0%, 98%);
 $White:hsl(0, 0%, 100%);
@@ -53,6 +53,7 @@ a {
 }
 .grid{
     display: grid;
+    
  }
 
 .media {
@@ -77,15 +78,20 @@ a {
 .media-right .image, .media-left {
     padding: 1rem;
 }
+
+.media-right > .image:hover {
+    transform: scale(1.2,1.2);
+    cursor: pointer;
+
+}
+
 .column-media {
     background: url(../images/image-intro-desktop.jpg) center / cover;
     width: 100%;
-    height: 500px;
+    height: 600px;
     margin: auto 50%;
     
 }
-
-
 .is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
 .is-paddinglg {padding: 3.75rem;}
 .is-section-nav {
@@ -166,6 +172,11 @@ a {
 
 .darkviolet {background: $darkViolet;}
 
+.footer {
+    position: relative;
+    background: $veryLightGray;
+}
+
 .footer-list {
     text-align: center;
     &  li a{
@@ -173,12 +184,28 @@ a {
         font-family: $family-karla;
         text-transform: uppercase;
     }
+    & a:hover {
+    color: $veryDarkViolet;
+    font-size: 1.1em;
+    text-decoration: underline ;
+    }
 }
 
-.footer-list li:first-child{
+.footer-list li:first-child {
     padding: 1.75rem;
     color: $graishBlue ;
 }
+
+.footer::before {
+    content: '';
+    position: absolute;
+    left:0;
+    top:0;
+    background: url(..//images/bg-pattern-footer-desktop.svg)no-repeat;
+    width: 100%;
+    height: 300px;
+}
+
 .title-main, .subtitle {color: $veryLightGray;}
 
 .title-secondary {
@@ -205,35 +232,47 @@ a {
     margin-bottom: 2.75rem;
 }
 
+
 .button-subtitle, .button-sec {
-    background-color: transparent;
-    color: #fff;
-    border-color: $veryLightGray;
-} 
+    color: $White;
+    background-color: transparent;  
+}
+.button-subtitle:hover, .button-sec:hover {
+    color: $darkViolet;
+    background-color: $White;  
+}
+
+
+
+
+
 .hero-third {
     padding: $hero-body-padding-medium;
 }
 
-.footer {
-    position: relative;
-    background: $veryLightGray;
-}
-.footer::before {
-    content: '';
-    position: absolute;
-    // display: block;
-    left:0;
-    top:0;
-    background: url(..//images/bg-pattern-footer-desktop.svg)no-repeat;
-    width: 100%;
-    height: 300px;
-}
+
 .container-break {
     width: 80%;
     border-bottom: 1px solid;
     opacity: 15%;
     margin-bottom: 2rem;
 }
+
+// .navbar-item.item-highlight {
+//     // transition: all 0.2s;
+//     border-bottom: 2px solid white;
+//     // position: absolute;
+//     // top: 0;
+//     // background: white;
+//     // left: 0;
+//     z-index: -1;
+//     border-radius: 10px;
+//     display: block;
+//     box-shadow: 0 0 10px rgba(0,0,0,0.2);
+//   }
+
+
+
 @include mobile {
     .notification {
         text-align: center;
@@ -267,8 +306,10 @@ a {
         font-size: 2rem;
     }
     .column-media {
-        
+        background: url(../images/image-intro-mobile.jpg) center / cover;
         margin: 0 auto; 
+        width: 100%;
+        height: 555px;
     }
     .media {
         flex-direction: column;
