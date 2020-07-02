@@ -30,9 +30,6 @@ $family-sans-serif: "Nunito", sans-serif;
 $family-dm-serif: 'DM Serif Display', serif;
 $family-karla: 'Karla', sans-serif;
 
-
-
-
 // $widescreen-enabled: false;
 // $fullhd-enabled: false;
 
@@ -47,14 +44,9 @@ $input-shadow: none;
 }
 
 ul { list-style: none; }
-a { 
-    text-decoration: none; 
-    
-}
-.grid{
-    display: grid;
-    
- }
+a { text-decoration: none; }
+.grid{ display: grid; }
+.hero-main {height: 70rem;}
 
 .media {
     display: flex;
@@ -79,19 +71,19 @@ a {
     padding: 1rem;
 }
 
-.media-right > .image:hover {
+.image-svg:hover {
     transform: scale(1.2,1.2);
     cursor: pointer;
-
+    fill: $veryDarkViolet;
 }
 
 .column-media {
     background: url(../images/image-intro-desktop.jpg) center / cover;
     width: 100%;
-    height: 600px;
+    height: 49rem;
     margin: auto 50%;
-    
 }
+
 .is-paddingless-horizontal { padding-left: 0; padding-right: 0; }
 .is-paddinglg {padding: 3.75rem;}
 .is-section-nav {
@@ -99,6 +91,11 @@ a {
     padding-top: 0;
     padding-bottom: 0;
 }
+
+.navbar-item:hover {
+    font-size: 1.1em;
+}
+
 .container-sec {
     position: relative;
     min-width: 80%;
@@ -106,6 +103,7 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+
 .container-sec::after {
     position: absolute;
     content: '';
@@ -130,14 +128,16 @@ a {
     font-size: 56px;
     line-height: 1;
 }
+
 .hero-body {
      min-height: 20vh;    
 }
-.col-pattern {
 
-    min-height: 30rem;
-    padding: 4.5rem;
+.col-pattern {
+    min-height: 40rem;
+    padding: 1.5rem;
 }
+
 .col-pattern::before {
     content:'';
     position: absolute;
@@ -147,22 +147,24 @@ a {
     width: 195px;
     height: 500px;
  }
+
 .col-pattern::after {
     content:'';
-    
     position: absolute;
     top:0;
     right: 0;
     background: url(..//images/bg-pattern-intro-right-desktop.svg) no-repeat;
     width: 438px;
     height: 650px;
-   
+    z-index: 1
 }
+
 .pattern-mobile {
     width: 100%;
     right: 0;
     display: none;
 }
+
 .hero-media {
     min-width: 40rem;
     min-height: 40rem;
@@ -215,23 +217,34 @@ a {
     font-size: 4rem;
     margin-bottom: 2.5rem;
 }
+
 .hero-secondary {
     margin-top: 1rem;
 }
+
 .title-main {
     font-family: $family-dm-serif;
     font-size: 4rem;
+    margin-top: 4%;
 }
+
 .subtitle {
     font-size: 1rem;
 }
+
 .title-main-rectangle{ 
     border: solid 1px ;
     border-color: $White;
     width: 10rem;
-    margin-bottom: 2.75rem;
+    margin-top: 20%;
 }
 
+.title-secondary-rectangle{
+    border: solid 1px ;
+    border-color: $darkgraishViolet;
+    width: 10rem;
+    margin-bottom: 5%;
+}
 
 .button-subtitle, .button-sec {
     color: $White;
@@ -242,14 +255,14 @@ a {
     background-color: $White;  
 }
 
-
-
-
+.button-navbar:hover {
+    color: $White;
+    background-color: $veryDarkViolet;
+}
 
 .hero-third {
     padding: $hero-body-padding-medium;
 }
-
 
 .container-break {
     width: 80%;
@@ -270,9 +283,6 @@ a {
 //     display: block;
 //     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 //   }
-
-
-
 @include mobile {
     .notification {
         text-align: center;

@@ -5324,6 +5324,9 @@ a {
 .grid {
   display: grid; }
 
+.hero-main {
+  height: 70rem; }
+
 .media {
   display: flex;
   flex-direction: row;
@@ -5346,14 +5349,15 @@ a {
 .media-right .image, .media-left {
   padding: 1rem; }
 
-.media-right > .image:hover {
+.image-svg:hover {
   transform: scale(1.2, 1.2);
-  cursor: pointer; }
+  cursor: pointer;
+  fill: #2b1a3c; }
 
 .column-media {
   background: url(../images/image-intro-desktop.jpg) center/cover;
   width: 100%;
-  height: 600px;
+  height: 49rem;
   margin: auto 50%; }
 
 .is-paddingless-horizontal {
@@ -5367,6 +5371,9 @@ a {
   min-height: 1.5rem;
   padding-top: 0;
   padding-bottom: 0; }
+
+.navbar-item:hover {
+  font-size: 1.1em; }
 
 .container-sec {
   position: relative;
@@ -5401,8 +5408,8 @@ a {
   min-height: 20vh; }
 
 .col-pattern {
-  min-height: 30rem;
-  padding: 4.5rem; }
+  min-height: 40rem;
+  padding: 1.5rem; }
 
 .col-pattern::before {
   content: '';
@@ -5420,7 +5427,8 @@ a {
   right: 0;
   background: url(..//images/bg-pattern-intro-right-desktop.svg) no-repeat;
   width: 438px;
-  height: 650px; }
+  height: 650px;
+  z-index: 1; }
 
 .pattern-mobile {
   width: 100%;
@@ -5479,7 +5487,8 @@ a {
 
 .title-main {
   font-family: "DM Serif Display", serif;
-  font-size: 4rem; }
+  font-size: 4rem;
+  margin-top: 4%; }
 
 .subtitle {
   font-size: 1rem; }
@@ -5488,7 +5497,13 @@ a {
   border: solid 1px;
   border-color: white;
   width: 10rem;
-  margin-bottom: 2.75rem; }
+  margin-top: 20%; }
+
+.title-secondary-rectangle {
+  border: solid 1px;
+  border-color: #837d87;
+  width: 10rem;
+  margin-bottom: 5%; }
 
 .button-subtitle, .button-sec {
   color: white;
@@ -5497,6 +5512,10 @@ a {
 .button-subtitle:hover, .button-sec:hover {
   color: #2d2640;
   background-color: white; }
+
+.button-navbar:hover {
+  color: white;
+  background-color: #2b1a3c; }
 
 .hero-third {
   padding: 9rem 1.5rem; }
