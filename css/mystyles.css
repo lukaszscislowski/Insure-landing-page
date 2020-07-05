@@ -5327,6 +5327,12 @@ a {
 .hero-main {
   height: 70rem; }
 
+a:focus {
+  outline: 3px solid #000; }
+
+a:active {
+  color: #000000; }
+
 .media {
   display: flex;
   flex-direction: row;
